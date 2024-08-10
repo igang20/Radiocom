@@ -1,0 +1,45 @@
+.rates-card {
+  width: 250px;
+  height: 300px;
+  border-radius: 40px;
+  border: 3px solid #1d7ac1;
+  background-color: #e1f1ff;
+  text-align: start;
+}
+
+.rates-card h4 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.rates-card h5 {
+  font-size: 32px;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 23px;
+}
+.rates-card h6 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.rates-card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7c7b7b;
+  margin-top: 40px;
+  margin-left: 23px;
+  margin-bottom: 0;
+}
+.rates-card img {
+  margin-left: 23px;
+}
+.rates-card #price {
+  text-align: center;
+  margin-left: 0;
+  margin-top: 25px;
+}

@@ -1,0 +1,42 @@
+.popular-rates {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular-rates-title {
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 140px;
+}
+.cards-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  list-style-type: none;
+}
+.rates-btn-container {
+  width: 305px;
+  height: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.rates-btn {
+  width: 50%;
+  height: 100%;
+}
+.rates-btn-left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #1d7ac1;
+  border: 3px solid #1d7ac1;
+  color: white;
+}
+.rates-btn-right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: white;
+  border: 3px solid #1d7ac1;
+}
