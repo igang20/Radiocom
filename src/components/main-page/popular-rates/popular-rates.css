@@ -4,11 +4,27 @@
   flex-direction: column;
   align-items: center;
 }
+
+.rates-content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 0;
+}
+
+.rates-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
 .popular-rates-title {
   font-size: 64px;
   font-weight: 400;
   margin-bottom: 0;
-  margin-top: 140px;
 }
 .cards-container ul {
   display: flex;
@@ -16,6 +32,7 @@
   align-items: center;
   gap: 90px;
   list-style-type: none;
+  padding: 10px;
 }
 .rates-btn-container {
   width: 305px;

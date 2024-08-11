@@ -2,7 +2,7 @@ import "./footer.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <><footer>
       <div className="footer-content">
         <div className="footer-content-block">
           <h5>
@@ -49,6 +49,6 @@ export default function Footer() {
           </h6>
         </div>
       </div>
-    </footer>
+    </footer></>
   );
 }
