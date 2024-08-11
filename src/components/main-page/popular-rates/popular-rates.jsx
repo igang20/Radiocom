@@ -50,7 +50,9 @@ export default function PopularRates() {
   return (
     <section className="popular-rates">
       <div className="rates-content">
+        <img src="/imgs/BcgReferences/Vector.svg" alt="router" className="bcg-img" />
         <div className="rates-heading">
+
           <h1 className="popular-rates-title">Tарифные планы</h1>
           <div className="rates-btn-container">
             <button
@@ -72,7 +74,9 @@ export default function PopularRates() {
         <div className="cards-container">
           <ul>{CardsList}</ul>
         </div>
+
       </div>
+
     </section>
   );
 }
