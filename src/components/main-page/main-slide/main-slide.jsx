@@ -10,10 +10,10 @@ export default function MainSlide() {
           <div className="hr"></div>
           <div className="main-slide-btn-container">
             <button className="main-slide-connect-button">
-              <a href="#">Подключить</a>
+              Подключить
             </button>
             <button className="main-slide-connect-button">
-              <a href="#">Проверка скорости</a>
+              Проверка скорости
             </button>
           </div>
         </div>

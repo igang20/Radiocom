@@ -9,7 +9,7 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .main-slide-content {
-  width: 1420px;
+  width: 1400px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@
   align-items: start;
   justify-content: center;
   padding-left: 30px;
-  line-height: 90px;
+  /* line-height: 90px; */
 }
 .main-slide-text h1 {
   font-size: 90px;
@@ -41,27 +41,30 @@
 .main-slide .hr {
   width: 600px;
   height: 3px;
-  background: linear-gradient(70deg, #97caff 0%, #5f93ca 100%);
+  /* background: linear-gradient(70deg, #97caff 0%, #5f93ca 100%); */
+  background: rgb(151, 202, 255);
   -webkit-box-shadow: 0px 4px 9.6px 0px #1d7ac1;
   -moz-box-shadow: 0px 4px 9.6px 0px #1d7ac1;
   box-shadow: 0px 4px 9.6px 0px #1d7ac1;
 }
 .main-slide-btn-container {
+  height: auto;
   display: flex;
   gap: 20px;
 }
 .main-slide-connect-button {
-  height: 47px;
+  color: #ffff;
+  padding: 15px;
   background-color: #3785c4;
   border: none;
   border-radius: 20px;
   margin-top: 20px;
 }
-.main-slide-connect-button a {
+/* .main-slide-connect-button a {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
   padding-left: 10px;
   padding-right: 10px;
-}
+} */

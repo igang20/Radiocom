@@ -7,12 +7,14 @@ import PopularRates from "./components/main-page/popular-rates/popular-rates";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <MainSlide />
-      <PopularRates />
+    <>
+      <div className="App">
+        <Header />
+        <MainSlide />
+        <PopularRates />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
