@@ -1,0 +1,35 @@
+.NewsCard {
+  width: 500px;
+  background: rgb(225, 241, 255);
+  padding: 20px 25px;
+  border-radius: 20px;
+  max-height: 250px;
+  overflow: hidden;
+}
+.NewsText {
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.NewsHeading {
+  width: auto;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.HeadigAccent {
+  width: 250px;
+  margin-top: 3px;
+  height: 3px;
+  background: rgb(151, 202, 255);
+  border: none;
+}
+.NewsDate {
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  color: #c0c5ca;
+  text-align: end;
+}

@@ -6,7 +6,9 @@ import PopularRates from "./components/main-page/popular-rates/popular-rates";
 
 import useFetch from "./hooks/useFetch";
 import { normalizeNewsDataObject, getData } from "./hooks/fetchData";
+import getData from "./hooks/fetchData";
 import { useEffect, useState } from "react";
+import NewsSection from "./components/news/NewsSection";
 
 function App() {
   const [data, setData] = useState(null);
@@ -25,6 +27,7 @@ function App() {
         <Header />
         <MainSlide />
         <PopularRates />
+        <NewsSection />
         <div>
           {data ? (
             <ul>
