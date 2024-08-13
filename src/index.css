@@ -6,6 +6,7 @@
 body {
   margin: 0;
   font-family: "TT Norms Pro";
+  overflow-x: hidden;
 }
 button {
   font: inherit;

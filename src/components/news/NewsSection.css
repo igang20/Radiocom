@@ -1,6 +1,7 @@
 .news-section {
   width: 100%;
   padding: 70px;
+  box-sizing: border-box;
 }
 
 .news-content {
@@ -29,4 +30,9 @@
 .NewsList {
   list-style-type: none;
   display: flex;
+}
+.bcg-img2 {
+  position: absolute;
+  z-index: -2;
+  margin-left: 1500px;
 }
