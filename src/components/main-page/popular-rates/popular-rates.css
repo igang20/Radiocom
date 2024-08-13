@@ -63,12 +63,5 @@
 .bcg-img {
   z-index: -2;
   position: absolute;
-  left: -224px;
-  width: 656px;
-  height: 656px;
-  /* 
-  width: 656px;
-  height: 656px;
-  left: -224px;
-  top: 650px; */
+  margin-right: 1400px;
 }

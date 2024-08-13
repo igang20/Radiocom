@@ -1,6 +1,7 @@
 .news-section {
   width: 100%;
   padding: 70px;
+  box-sizing: border-box;
 }
 
 .news-content {
@@ -24,4 +25,10 @@
 .news-heading {
   font-size: 64px;
   font-weight: 400;
+}
+
+.bcg-img2 {
+  position: absolute;
+  z-index: -2;
+  margin-left: 1500px;
 }
