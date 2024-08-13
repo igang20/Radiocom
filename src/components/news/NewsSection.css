@@ -25,3 +25,8 @@
   font-size: 64px;
   font-weight: 400;
 }
+
+.NewsList {
+  list-style-type: none;
+  display: flex;
+}

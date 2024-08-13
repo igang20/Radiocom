@@ -1,16 +1,12 @@
 export const normalizeNewsDataObject = (obj) => {
-  let str = JSON.stringify(obj);
-  console.log(str);
-  let results = [""];
-  for (let el of str) {
+  let newObj = [];
+  for (let el of obj.slice(-2)) {
     delete el.attributes.createdAt;
     delete el.attributes.updatedAt;
     delete el.attributes.publishedAt;
-    console.log(el);
-    console.log("next");
-    results += el;
+    newObj.push(el);
   }
-  const newObj = JSON.parse(results);
+  console.log(newObj);
   return newObj;
 };
 
