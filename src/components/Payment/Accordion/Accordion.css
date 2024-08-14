@@ -1,0 +1,13 @@
+.MuiAccordion-root {
+  width: 100%;
+  border-radius: 20px !important;
+  border: 3px solid rgb(29, 122, 193) !important;
+  padding: 20px;
+  font-size: 20px;
+  box-shadow: none !important;
+}
+
+.MuiSvgIcon-root {
+  font-size: 3rem !important;
+  fill: rgb(29, 122, 193) !important;
+}
