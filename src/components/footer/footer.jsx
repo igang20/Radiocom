@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "./footer.css";
+
 
 export default function Footer() {
   return (
@@ -6,46 +8,46 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-content-block">
           <h5>
-            <a href="">Услуги</a>
+            <Link href="">Услуги</Link>
           </h5>
           <h6>
-            <a href="">Способы оплаты</a>
+            <Link href="">Способы оплаты</Link>
           </h6>
         </div>
         <div className="footer-content-block">
           <h5>
-            <a href="">Сервис и помощь</a>
+            <Link href="">Сервис и помощь</Link>
           </h5>
           <h6>
-            <a href="">Тех. поддержка</a>
+            <Link href="">Тех. поддержка</Link>
           </h6>
           <h6>
-            <a href="">Тест скорости</a>
+            <Link href="">Тест скорости</Link>
           </h6>
         </div>
         <div className="footer-content-block">
           <h5>
-            <a href="">О компании</a>
+            <Link href="">О компании</Link>
           </h5>
           <h6>
-            <a href="">Новости</a>
+            <Link href="">Новости</Link>
           </h6>
           <h6>
-            <a href="">Контакты</a>
+            <Link href="">Контакты</Link>
           </h6>
           <h6>
-            <a href="">Публичная оферта</a>
+            <Link href="">Публичная оферта</Link>
           </h6>
         </div>
         <div className="footer-content-block">
           <h5>
-            <a href="">©2024</a>
+            <Link href="">©2024</Link>
           </h5>
           <h6>
-            <a href="">Подключение</a>
+            <Link href="">Подключение</Link>
           </h6>
           <h6>
-            <a href="">Поддержка</a>
+            <Link href="">Поддержка</Link>
           </h6>
         </div>
       </div>

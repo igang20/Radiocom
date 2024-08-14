@@ -1,45 +1,30 @@
 import "./App.css";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import MainSlide from "./components/main-page/main-slide/main-slide";
-import PopularRates from "./components/main-page/popular-rates/popular-rates";
 
-import useFetch from "./hooks/useFetch";
-import { normalizeNewsDataObject, getData } from "./hooks/fetchData";
-import getData from "./hooks/fetchData";
-import { useEffect, useState } from "react";
-import NewsSection from "./components/news/NewsSection";
+import Header from "./components/header/header";
+import MainPage from "./pages/MainPage/MainPage";
+import About from "./pages/AboutUs/about";
+import Footer from "./components/footer/footer";
+
+import { Route, Routes } from "react-router-dom";
+
+// import { normalizeNewsDataObject, getData } from "./hooks/fetchData";
+// import { useEffect, useState } from "react";
+// import useFetch from "./hooks/useFetch";
 
 function App() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const myData = getData("http://localhost:1337/api/news").then((res) => {
-      setData(res.data);
-      console.log(res.data);
-      console.log(normalizeNewsDataObject(res.data));
-    });
-  }, []);
-
+  // const [data, setData] = useState(null);
   return (
     <>
-      <div className="App">
-        <Header />
-        <MainSlide />
-        <PopularRates />
-        <NewsSection />
-        <div>
-          {data ? (
-            <ul>
-              {data.map((itm, index) => {
-                return <li key={index}>{itm.attributes.title}</li>;
-              })}
-            </ul>
-          ) : (
-            "Error :("
-          )}
-        </div>
-      </div>
+      <Header />
+      <section className="App">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/payment" />
+          <Route path="/support" />
+          <Route path="/speedtest" />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </section>
       <Footer />
     </>
   );
