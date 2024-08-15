@@ -9,29 +9,9 @@ export default function about() {
                 <h1 className="about-us">О нас</h1>
                 <div className="info">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                        lectus risus, finibus ornare vestibulum et, feugiat quis dui.
-                        Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur maximus
-                        est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat
-                        posuere, eros nisi tristique nibh, mollis vehicula lectus tortor eu
-                        purus. Donec ut tortor blandit, sagittis diam eget, suscipit eros.
-                        Quisque at magna neque. Nulla faucibus mi at nunc mattis placerat.
-                        Pellentesque quis augue quis elit tristique auctor. Integer varius
-                        est orci, vel egestas felis dictum nec. Phasellus porta ex sit amet
-                        turpis finibus, sed vestibulum nisl efficitur. Praesent ultrices
-                        diam enim. In ut tellus sed sem placerat sollicitudin. Donec quis
-                        mollis dolor. Etiam viverra, arcu cursus porttitor porttitor, diam
-                        nunc auctor nisl, quis placerat magna erat et odio. Phasellus
-                        feugiat turpis quis mollis lacinia. Sed ac orci et nisi venenatis
-                        pharetra ac non arcu.
+                        Наша компания предоставляет высококачественные интернет-услуги, ориентированные на удобство и потребности пользователей. Мы верим, что быстрый и стабильный доступ к сети — это не просто инструмент, а основа для развития, образования и развлечений. Наши передовые технологии и дружелюбная поддержка обеспечивают надежное подключение, где бы вы ни находились. С нами вы всегда на связи, ведь мы делаем интернет доступным и простым для всех!
 
-                        <br />
-                        <br />In a dapibus nulla. Aenean erat orci, egestas non orci at,
-                        varius tempus risus. Ut suscipit lorem magna, quis auctor leo
-                        molestie ac. Integer ut efficitur neque. Curabitur sollicitudin
-                        ipsum dolor, et tempus massa lacinia a. Donec efficitur egestas
-                        facilisis. Aliquam feugiat convallis arcu quis sollicitudin. Nullam
-                        eleifend iaculis sapien id scelerisque.
+
                     </p>
                 </div>
                 <div className="contacts-container">

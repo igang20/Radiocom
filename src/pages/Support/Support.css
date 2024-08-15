@@ -45,3 +45,18 @@ textarea {
   padding-top: 15px;
   height: auto !important;
 }
+
+@media screen and (max-width: 425px) {
+  .support-heading {
+    margin: 0;
+  }
+  .support-block {
+    padding: 30px 15px;
+    border-radius: 30px;
+    background-position-x: 100px;
+    background-size: 150%;
+  }
+  .support-form {
+    width: 100%;
+  }
+}

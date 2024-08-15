@@ -83,6 +83,7 @@ main a {
 }
 
 h1 {
+  text-align: center;
   font-size: 64px;
   font-weight: 600 !important
   ;
@@ -95,4 +96,11 @@ p {
 
 ul {
   list-style: none;
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 48px !important;
+    line-height: 52px;
+  }
 }

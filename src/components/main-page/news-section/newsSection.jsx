@@ -7,7 +7,7 @@ export default function NewsSection() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    const myData = getData("http://localhost:1337/api/news").then((res) => {
+    const myData = getData("http://192.168.0.87:1337/api/news").then((res) => {
       setData(normalizeNewsDataObject(res.data));
     });
   }, []);
@@ -15,11 +15,11 @@ export default function NewsSection() {
   return (
     <section className="news-section">
       <div className="news-content">
-        <img
+        {/* <img
           src="/imgs/BcgReferences/Newspaper.svg"
           alt="Newspaper"
           className="bcg-img2"
-        />
+        /> */}
         <h1 className="news-heading">Новости компании</h1>
         <div>
           {data ? (

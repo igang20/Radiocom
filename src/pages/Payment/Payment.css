@@ -51,3 +51,14 @@
   margin-top: 0.67em;
   width: 100%;
 }
+
+@media screen and (max-width: 425px) {
+  .payment-heading {
+    margin: 0;
+  }
+  .payment-block {
+    padding: 30px 15px;
+    border-radius: 30px;
+    gap: 20px;
+  }
+}

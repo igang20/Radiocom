@@ -9,15 +9,13 @@ import MobileHeader from "./mobileHeader/MobileHeader";
 export default function Header() {
   const dimensions = useWindowDimensions();
 
-  console.log(dimensions.width);
-  console.log(window.innerWidth);
   return (
     <>
-      {dimensions.width > 1024 ? (
+      {dimensions.width > 768 ? (
         <header>
           <div className="header-content">
             <Link to="/">
-              <img src="/imgs/logotype.svg" className="logo" alt="logo" />
+              <img src="/imgs/logotype.png" className="logo" alt="logo" height={'auto'} />
             </Link>
             <div className="header-links">
               <Link to="/payment">Оплата</Link>

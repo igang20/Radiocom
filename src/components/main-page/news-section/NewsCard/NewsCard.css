@@ -7,10 +7,15 @@
   overflow: hidden;
 }
 .NewsText {
-  overflow: hidden;
+  height: min-content;
+  width: 100%;
   font-size: 18px;
   font-weight: 300;
   padding-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  overflow: hidden;
 }
 
 .NewsHeading {

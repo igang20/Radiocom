@@ -49,4 +49,12 @@
     font-size: 40px;
     font-weight: 800;
   }
+
+  .news-content {
+    gap: 0;
+  }
+  .news-section {
+    padding: 0;
+    padding-bottom: 40px;
+  }
 }

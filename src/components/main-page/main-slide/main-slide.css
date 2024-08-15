@@ -107,7 +107,8 @@
   }
   .main-slide-connect-button {
     width: auto;
-    font-size: 16px;
+    font-size: 17px;
+    padding: 6px 14px !important;
   }
 }
 @media (max-width: 830px) {
@@ -129,7 +130,6 @@
   }
   .main-slide-connect-button {
     width: auto;
-    font-size: 26px;
   }
   .main-slide-text {
     width: 100%;
@@ -151,7 +151,6 @@
   }
   .main-slide-connect-button {
     width: auto;
-    font-size: 20px;
   }
   .main-slide-text {
     width: 100%;
@@ -173,7 +172,6 @@
   }
   .main-slide-connect-button {
     width: auto;
-    font-size: 13px;
   }
   .main-slide-text {
     width: 100%;
