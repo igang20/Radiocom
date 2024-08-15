@@ -68,3 +68,23 @@
   padding-left: 10px;
   padding-right: 10px;
 } */
+@media (max-width: 1340px) {
+  .main-slide-img {
+    width: 35%;
+  }
+  .main-slide-img img {
+    width: 460px;
+  }
+  .main-slide-text {
+    padding-left: 60px;
+  }
+  .main-slide-text h1 {
+    font-size: 70px;
+  }
+  .main-slide-text h2 {
+    font-size: 48px;
+  }
+  .main-slide-text .hr {
+    width: 400px;
+  }
+}

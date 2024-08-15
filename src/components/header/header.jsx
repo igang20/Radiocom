@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header>
       <div className="header-content">
-        <img src="/imgs/logotype.svg" className="logo"></img>
+        <img src="/imgs/logotype.svg" className="logo" />
         <div className="header-links">
           <a href="#">Тарифы</a>
           <a href="#">Оплата</a>

@@ -6,7 +6,6 @@ export const normalizeNewsDataObject = (obj) => {
     delete el.attributes.publishedAt;
     newObj.push(el);
   }
-  console.log(newObj);
   return newObj;
 };
 
