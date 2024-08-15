@@ -1,18 +1,20 @@
 "use client";
 import "./header.css";
-import useWindowDimensions from "../useWindowDimensions/WindowDimensions";
+
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const dimensions = useWindowDimensions();
   return (
     <header>
       <div className="header-content">
-        <img src="/imgs/logotype.svg" className="logo" />
+        <Link to="/">
+          <img src="/imgs/logotype.svg" className="logo" alt="logo" />
+        </Link>
         <div className="header-links">
-          <a href="#">Тарифы</a>
-          <a href="#">Оплата</a>
-          <a href="#">Поддержка</a>
-          <a href="#">О компании</a>
+          <Link to="/payment">Оплата</Link>
+          <Link to="/support">Поддержка</Link>
+          <Link to="#">Тест скорости</Link>
+          <Link to="/about">О компании</Link>
         </div>
       </div>
     </header>

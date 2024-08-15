@@ -1,0 +1,7 @@
+.AccordionsSection {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+  flex-direction: column;
+}

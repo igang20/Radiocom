@@ -18,7 +18,7 @@ export default function MainSlide() {
           </div>
         </div>
         <div className="main-slide-img">
-          <img src="/imgs/cloud.svg"></img>
+          <img src="/imgs/cloud.svg" alt="Cloud"></img>
         </div>
       </div>
     </article>

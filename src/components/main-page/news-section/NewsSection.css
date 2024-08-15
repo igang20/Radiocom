@@ -1,4 +1,6 @@
 .news-section {
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding: 70px;
   box-sizing: border-box;
@@ -7,8 +9,7 @@
 }
 
 .news-content {
-  margin: 0 auto;
-  width: 1400px;
+  width: 1300px;
   display: flex;
   flex-direction: column;
   align-items: center;

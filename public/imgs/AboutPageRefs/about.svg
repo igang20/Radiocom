@@ -1,0 +1,16 @@
+<svg width="625.000000" height="625.000000" viewBox="0 0 625 625" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip228_156">
+			<rect id="question-circle-svgrepo-com 1" rx="-0.500000" width="624.000000" height="624.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="question-circle-svgrepo-com 1" rx="-0.500000" width="624.000000" height="624.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip228_156)">
+		<path id="Vector" d="M312.5 572.91C168.67 572.91 52.08 456.32 52.08 312.5C52.08 168.67 168.67 52.08 312.5 52.08C456.32 52.08 572.91 168.67 572.91 312.5C572.91 456.32 456.32 572.91 312.5 572.91Z" stroke="#C9C9C9" stroke-opacity="0.350000" stroke-width="50.000000"/>
+		<path id="Vector" d="M263.67 231.12C263.67 204.15 285.53 182.29 312.5 182.29C339.46 182.29 361.32 204.15 361.32 231.12C361.32 249.02 351.69 264.67 337.32 273.17C324.94 280.49 312.5 291.6 312.5 305.99L312.5 338.54" stroke="#C9C9C9" stroke-opacity="0.350000" stroke-width="50.000000" stroke-linecap="round"/>
+		<path id="Vector" d="M338.54 416.66C338.54 431.04 326.88 442.7 312.5 442.7C298.11 442.7 286.45 431.04 286.45 416.66C286.45 402.28 298.11 390.62 312.5 390.62C326.88 390.62 338.54 402.28 338.54 416.66Z" fill="#C9C9C9" fill-opacity="0.350000" fill-rule="evenodd"/>
+	</g>
+</svg>
