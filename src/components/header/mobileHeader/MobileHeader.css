@@ -1,0 +1,15 @@
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+}
+
+.mobile-header button {
+  all: unset;
+}
+
+.drawer-list {
+  width: 280px;
+  background-color: wheat;
+}
