@@ -39,3 +39,14 @@
   z-index: -2;
   margin-left: 1500px;
 }
+@media (max-width: 720px) {
+  .news-heading {
+    font-size: 54px;
+  }
+}
+@media (max-width: 480px) {
+  .news-heading {
+    font-size: 40px;
+    font-weight: 800;
+  }
+}

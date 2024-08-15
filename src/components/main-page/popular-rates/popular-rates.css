@@ -68,3 +68,27 @@
   position: absolute;
   margin-right: 1300px;
 }
+@media (max-width: 1300px) {
+  .popular-rates {
+    height: 1100px;
+  }
+  .cards-container ul {
+    width: 800px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 630px) {
+  .cards-container ul {
+    gap: 30px;
+  }
+  .popular-rates-title {
+    font-size: 54px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 480px) {
+  .popular-rates-title {
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
