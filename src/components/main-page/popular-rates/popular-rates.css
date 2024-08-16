@@ -65,7 +65,7 @@
 .bcg-img {
   z-index: -2;
   position: absolute;
-  margin-right: 1300px;
+  margin-right: 80%;
 }
 .ServiceSlider {
   width: 100%;
@@ -85,7 +85,14 @@
 .swiper-wrapper {
   width: 100vw !important;
 }
+.PS-text {
+  align-self: flex-end;
+  margin-right: 10px;
+}
 @media (max-width: 1340px) {
+  .rates-content {
+    width: auto;
+  }
   .cards-container ul {
     gap: 30px;
     flex-wrap: wrap;

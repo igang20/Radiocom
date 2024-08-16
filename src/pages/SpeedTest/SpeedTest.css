@@ -1,0 +1,25 @@
+.speed-test-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 1300px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50px;
+  padding: 80px;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 425px) {
+  .speed-test-block {
+    padding: 30px 15px;
+    border-radius: 30px;
+    gap: 20px;
+    transform: scale(0.9);
+  }
+
+  .speed-test-block > h1 {
+    margin: 0;
+  }
+}

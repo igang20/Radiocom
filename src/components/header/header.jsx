@@ -20,7 +20,7 @@ export default function Header() {
             <div className="header-links">
               <Link to="/payment">Оплата</Link>
               <Link to="/support">Поддержка</Link>
-              <Link to="#">Тест скорости</Link>
+              <Link to="/speedtest">Тест скорости</Link>
               <Link to="/about">О компании</Link>
             </div>
           </div>

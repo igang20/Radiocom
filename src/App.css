@@ -1,5 +1,5 @@
 .App {
-  min-height: calc(100vh - 100px - 190px);
+  min-height: calc(100vh - 200px);
 }
 button {
   cursor: pointer;

@@ -1,4 +1,4 @@
-"use client";
+
 import "./popular-rates.css";
 import RatesCard from "./rates-card/rates-card";
 import { useState } from "react";
@@ -72,8 +72,6 @@ export default function PopularRates() {
     );
   }
 
-  console.log(dimensions.width);
-  console.log(window.innerWidth);
   return (
     <section className="popular-rates">
       <div className="rates-content">
@@ -102,8 +100,9 @@ export default function PopularRates() {
           </div>
         </div>
         <div className="cards-container">
-          {dimensions.width > 480 ? <ul>{CardsList}</ul> : <MobileRates />}
+          {dimensions.width > 650 ? <ul>{CardsList}</ul> : <MobileRates />}
         </div>
+        <span className="PS-text">*Подключение бесплатно</span>
       </div>
     </section>
   );
