@@ -1,6 +1,6 @@
 .popular-rates {
   width: 100%;
-  height: 700px;
+  height: auto;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,6 @@
 }
 
 .rates-content {
-  width: 1300px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -68,18 +67,34 @@
   position: absolute;
   margin-right: 1300px;
 }
-@media (max-width: 1300px) {
-  .popular-rates {
-    height: 1100px;
-  }
+.ServiceSlider {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.ServiceSlider .swiper-slide {
+  background-color: rgba(0, 0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 18px;
+  width: 300px;
+  height: min-content;
+  display: flex;
+}
+.swiper-wrapper {
+  width: 100vw !important;
+}
+@media (max-width: 1340px) {
   .cards-container ul {
-    width: 800px;
+    gap: 30px;
     flex-wrap: wrap;
   }
 }
 @media (max-width: 630px) {
   .cards-container ul {
     gap: 30px;
+    flex-direction: column;
   }
   .popular-rates-title {
     font-size: 54px;
