@@ -1,6 +1,5 @@
 .popular-rates {
   width: 100%;
-
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -68,17 +67,34 @@
   position: absolute;
   margin-right: 1300px;
 }
-@media (max-width: 1300px) {
-  .rates-content {
-    width: 100%;
-  }
+.ServiceSlider {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.ServiceSlider .swiper-slide {
+  background-color: rgba(0, 0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 18px;
+  width: 300px;
+  height: min-content;
+  display: flex;
+}
+.swiper-wrapper {
+  width: 100vw !important;
+}
+@media (max-width: 1340px) {
   .cards-container ul {
+    gap: 30px;
     flex-wrap: wrap;
   }
 }
 @media (max-width: 630px) {
   .cards-container ul {
     gap: 30px;
+    flex-direction: column;
   }
   .popular-rates-title {
     font-size: 54px;

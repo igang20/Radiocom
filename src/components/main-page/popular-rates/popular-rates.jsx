@@ -1,10 +1,19 @@
+"use client";
 import "./popular-rates.css";
 import RatesCard from "./rates-card/rates-card";
 import { useState } from "react";
 import * as content from "./rates-data.js";
+import useWindowDimensions from "../../useWindowDimensions/WindowDimensions";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css/effect-cards";
 
 export default function PopularRates() {
-
+  const dimensions = useWindowDimensions();
   const [bussy, setBussy] = useState(false);
   let cardsContent = content.cardsContentCommon;
   if (bussy === false) {
@@ -14,13 +23,7 @@ export default function PopularRates() {
   }
   const CardsList = cardsContent.map((cardsContent, key) => (
     <li key={key}>
-      <RatesCard
-        // title={cardsContent.title}
-        // speed={cardsContent.speed}
-        // img={cardsContent.img}
-        // price={cardsContent.price}
-        {...cardsContent}
-      />
+      <RatesCard {...cardsContent} />
     </li>
   ));
 
@@ -46,13 +49,40 @@ export default function PopularRates() {
     right.style.backgroundColor = "white";
   }
 
+  function MobileRates() {
+    const SwiperList = cardsContent.map((cardsContent, key) => (
+      <li key={key}>
+        <SwiperSlide key={key}>
+          <RatesCard {...cardsContent} />
+        </SwiperSlide>
+      </li>
+    ));
 
+    return (
+      <>
+        <Swiper
+          rewind={true}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="ServiceSlider"
+        >
+          {SwiperList}
+        </Swiper>
+      </>
+    );
+  }
+
+  console.log(dimensions.width);
+  console.log(window.innerWidth);
   return (
     <section className="popular-rates">
       <div className="rates-content">
-        <img src="/imgs/BcgReferences/Vector.svg" alt="router" className="bcg-img" />
+        <img
+          src="/imgs/BcgReferences/Vector.svg"
+          alt="router"
+          className="bcg-img"
+        />
         <div className="rates-heading">
-
           <h1 className="popular-rates-title">Tарифные планы</h1>
           <div className="rates-btn-container">
             <button
@@ -72,11 +102,9 @@ export default function PopularRates() {
           </div>
         </div>
         <div className="cards-container">
-          <ul>{CardsList}</ul>
+          {dimensions.width > 480 ? <ul>{CardsList}</ul> : <MobileRates />}
         </div>
-
       </div>
-
     </section>
   );
 }
