@@ -4,14 +4,15 @@ import "./footer.css";
 
 export default function Footer() {
   return (
-    <><footer>
-      <div className="footer-content">
+    <>
+      <footer>
+        {/* <div className="footer-content">
         <div className="footer-content-block">
           <h5>
-            <Link href="">Услуги</Link>
+            Услуги
           </h5>
           <h6>
-            <Link href="">Способы оплаты</Link>
+            <Link href="/payment">Способы оплаты</Link>
           </h6>
         </div>
         <div className="footer-content-block">
@@ -50,7 +51,9 @@ export default function Footer() {
             <Link href="">Поддержка</Link>
           </h6>
         </div>
-      </div>
-    </footer></>
+      </div> */}
+
+        <p> RadioCOM ©2024</p>
+      </footer></>
   );
 }

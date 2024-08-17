@@ -17,10 +17,10 @@ export default function MobileHeader() {
             <button onClick={() => { setOpne(true) }}><MenuIcon /></button>
             <Link to='/'><img src="/imgs/logotype.png" className="logo" alt='logo' /></Link>
             <Drawer open={open} onClose={() => { toggleDrawer(false) }}>
-                <div className="header-links drawer-links">
+                <div className="header-links drawer-links" onClick={() => { toggleDrawer(false) }}>
                     <Link to="/payment">Оплата</Link>
                     <Link to="/support">Поддержка</Link>
-                    <Link to="#">Тест скорости</Link>
+                    <Link to="/speedtest">Тест скорости</Link>
                     <Link to="/about">О компании</Link>
                 </div>
             </Drawer>

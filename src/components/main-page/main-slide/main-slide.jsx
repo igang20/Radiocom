@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "./main-slide.css";
+
 
 export default function MainSlide() {
   return (
@@ -12,9 +14,11 @@ export default function MainSlide() {
             <button className="main-slide-connect-button">
               Подключить
             </button>
-            <button className="main-slide-connect-button">
-              Проверка скорости
-            </button>
+            <Link to='/speedtest'>
+              <button className="main-slide-connect-button">
+                Проверка скорости
+              </button>
+            </Link>
           </div>
         </div>
         <div className="main-slide-img">

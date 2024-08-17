@@ -6,10 +6,18 @@ import Support from "./pages/Support/Support";
 import About from "./pages/AboutUs/about";
 import Footer from "./components/footer/footer";
 import Payment from "./pages/Payment/Payment";
+import SpeedTest from "./pages/SpeedTest/SpeedTest";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
+  const userLocation = useLocation().pathname;
+
+  useEffect(() => {
+    window.localStorage.setItem("fixingReaload", true);
+  }, [userLocation]);
+
   return (
     <>
       <Header />
@@ -18,7 +26,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/support" element={<Support />} />
-          <Route path="/speedtest" />
+          <Route path="/speedtest" element={<SpeedTest />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </section>
@@ -26,7 +34,5 @@ function App() {
     </>
   );
 }
-
-// TODO: Исправит размеры контентныйх секций с 1400px на 1300px
 
 export default App;

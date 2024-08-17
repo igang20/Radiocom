@@ -99,6 +99,9 @@ ul {
 }
 
 @media screen and (max-width: 425px) {
+  body {
+    transform: scale(0.9s);
+  }
   h1 {
     font-size: 48px !important;
     line-height: 52px;
