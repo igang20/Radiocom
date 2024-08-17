@@ -25,12 +25,19 @@ export default function NewsSection() {
           {data ? (
             <ul className="cards-section">
               {data.map((itm, index) => {
+                let CardText = itm.attributes.body[0].children[0].text;
+                if (itm.attributes.body[0].children[0].text.length > 220) {
+                  CardText =
+                    itm.attributes.body[0].children[0].text.slice(0, 220) +
+                    "...";
+                }
                 return (
                   <NewsCard
                     key={index}
                     title={itm.attributes.title}
-                    text={itm.attributes.body[0].children[0].text}
+                    text={CardText}
                     date={itm.attributes.date}
+                    DialogText={itm.attributes.body[0].children[0].text}
                   />
                 );
               })}

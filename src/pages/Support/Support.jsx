@@ -43,6 +43,9 @@ export default function Support() {
                 ${values.phone}
                  ${values.comment}`
               );
+              values.name = "";
+              values.phone = "";
+              values.comment = "";
             }, 1000);
           }}
         >
@@ -81,6 +84,7 @@ export default function Support() {
                 rows={5}
                 placeholder="Ваш комментарий"
                 name={"comment"}
+                value={values.comment}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />

@@ -10,7 +10,6 @@ export const normalizeNewsDataObject = (obj) => {
 };
 let lastText = "";
 export function SendData(text) {
-  console.log(text);
   if (text == lastText) {
     return 0;
   } else {
