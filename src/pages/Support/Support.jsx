@@ -1,29 +1,11 @@
 import "./Support.css";
 import { Formik, Field } from "formik";
-import * as yup from "yup";
+
 import { SendData } from "../../hooks/fetchData";
 import { Input } from "@mui/material";
+import { supportSchema } from "../../hooks/dataTools";
 
 export default function Support() {
-  const supportSchema = yup.object().shape({
-    phone: yup
-      .string()
-      .max(8, "Номер должен содержать 8 символов")
-      .required("Введите номер телефона")
-      .matches(
-        new RegExp(`^(774|775|777|778|779|533|219|557)[0-9]{5}$`),
-        "Введите корректный номер телефона"
-      ),
-    name: yup
-      .string()
-      .matches(
-        new RegExp(
-          `^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?(\\s[А-ЯЁ]{1}[а-яё]{0,})?(\\s[А-ЯЁ]{1}[а-яё]{0,})?$`
-        ),
-        "Введите корректное ФИО"
-      )
-      .required("Это поле обязательно"),
-  });
   return (
     <main>
       <section className="support-block">
@@ -88,7 +70,7 @@ export default function Support() {
                   values.phone = values.phone
                     .replace(/\D/g, "")
                     .replace(/^(3730|373|0)/, "");
-                  handleBlur;
+
                 }}
                 value={values.phone}
               />
