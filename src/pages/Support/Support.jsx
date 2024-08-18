@@ -2,6 +2,7 @@ import "./Support.css";
 import { Formik, Field } from "formik";
 import * as yup from "yup";
 import { SendData } from "../../hooks/fetchData";
+import { Input } from "@mui/material";
 
 export default function Support() {
   const supportSchema = yup.object().shape({
@@ -34,19 +35,22 @@ export default function Support() {
         <Formik
           initialValues={{ name: "", phone: "", comment: "" }}
           validationSchema={supportSchema}
-          validateOnBlur
+          validateOnChange={false}
+          validateOnBlur={false}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               setSubmitting(false);
-              SendData(
+              const responcce = SendData(
                 `${values.name} 
                 ${values.phone}
                  ${values.comment}`
-              );
+              ).then(res => {
+                console.log(res.status)
+              });
               values.name = "";
               values.phone = "";
               values.comment = "";
-            }, 1000);
+            }, 2000);
           }}
         >
           {({
@@ -59,15 +63,23 @@ export default function Support() {
             isSubmitting,
           }) => (
             <form onSubmit={handleSubmit} className="support-form">
-              <input
+              <Input
+                fullWidth
+                variant="outlined"
                 type="text"
                 placeholder="ФИО"
-                name={"name"}
+                name="name"
                 value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                error={errors.name && true}
               />
-              <input
+
+              {console.log(errors.name)}
+              <Input
+                error={errors.phone && true}
+                fullWidth
+                variant="outlined"
                 type="text"
                 placeholder="Номер телефона"
                 name={"phone"}
@@ -76,10 +88,12 @@ export default function Support() {
                   values.phone = values.phone
                     .replace(/\D/g, "")
                     .replace(/^(3730|373|0)/, "");
+                  handleBlur;
                 }}
                 value={values.phone}
               />
               <textarea
+
                 type="text"
                 rows={5}
                 placeholder="Ваш комментарий"
@@ -89,7 +103,9 @@ export default function Support() {
                 onBlur={handleBlur}
               />
               <div style={{ color: "#ff0000" }}>
-                {[errors.name, errors.phone]}
+                <p>{errors.name}</p>
+                <p>{errors.phone}</p>
+
               </div>
               <button type="submit" disabled={isSubmitting}>
                 ОТПРАВИТЬ

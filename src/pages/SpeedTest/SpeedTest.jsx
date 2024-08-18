@@ -13,7 +13,7 @@ export default function SpeedTest() {
                 window.localStorage.setItem('fixingReaload', false)
                 window.location.reload()
             }
-        }, 500)
+        }, 800)
         return () => clearTimeout(timeout)
     }, [])
     return (

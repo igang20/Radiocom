@@ -39,7 +39,7 @@ button {
   padding: 10px 20px !important;
   border-radius: 20px;
   border: none;
-
+  cursor: pointer;
   color: #fff;
 }
 button:hover {
@@ -49,18 +49,43 @@ button:disabled {
   filter: grayscale(1);
 }
 
+/* INPUT STYLING */
+
 textarea,
 input {
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
+  color: black !important;
 }
+
 textarea:focus,
-input:focus {
-  outline: none;
+.Mui-focused {
+  outline: none !important;
   border: #48799f 3px solid !important;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.05),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
+.MuiInput-root {
+  background-color: #fff;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  color: black !important;
+}
+
+.MuiInput-root::before {
+  border: none !important;
+}
+
+.MuiInput-root::after {
+  border: none !important;
+}
+
+.Mui-error {
+  border-color: crimson !important;
+}
+
+/* INPUT STYLING */
 
 * {
   margin: 0;
@@ -102,7 +127,6 @@ ul {
   h1 {
     font-size: 48px !important;
     line-height: 52px;
-    transform: scale(0.9);
   }
   h2 {
     line-height: 26px !important;
