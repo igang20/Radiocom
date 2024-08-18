@@ -19,7 +19,7 @@
 body {
   margin: 0;
   font-family: "TT Norms Pro";
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 button {
   transition: all 0.3s ease;
@@ -99,11 +99,12 @@ ul {
 }
 
 @media screen and (max-width: 425px) {
-  body {
-    transform: scale(0.9s);
-  }
   h1 {
     font-size: 48px !important;
     line-height: 52px;
+    transform: scale(0.9);
+  }
+  h2 {
+    line-height: 26px !important;
   }
 }

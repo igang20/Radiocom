@@ -35,6 +35,11 @@
   font-size: 32px;
   font-weight: 300;
 }
+@media screen and (max-width: 425px) {
+  .rates-card {
+    transform: scale(0.8);
+  }
+}
 /* 
 .rates-card h4 {
   text-align: center;

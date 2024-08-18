@@ -1,14 +1,15 @@
 import "./NewsCard.css";
-import * as React from "react";
-import Button from "@mui/material/Button";
+
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import CloseIcon from '@mui/icons-material/Close';
+import { useState } from "react";
 
 export default function NewsCard(props) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -17,36 +18,39 @@ export default function NewsCard(props) {
     setOpen(false);
   };
   return (
-    <React.Fragment>
+    <>
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+
       >
+
         <DialogTitle id="alert-dialog-title">
-          {props.title}
           <p className="NewsDate">{props.date}</p>
+          {props.title}
+          <hr className="HeadigAccent" />
+
         </DialogTitle>
-        <DialogContent>
+        <DialogContent >
           <DialogContentText id="alert-dialog-description">
             {props.DialogText}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Закрыть</Button>
+          <button onClick={handleClose} style={{ borderRadius: '12px' }}>Закрыть</button>
         </DialogActions>
       </Dialog>
       <div className="NewsCard" onClick={handleClickOpen}>
-        <p className="NewsDate">{props.date}</p>
 
+        <p className="NewsDate">{props.date}</p>
         <h3 className="NewsHeading">
           {props.title}
           <hr className="HeadigAccent" />
         </h3>
-
         <article className="NewsText">{props.text}</article>
       </div>
-    </React.Fragment>
+    </>
   );
 }

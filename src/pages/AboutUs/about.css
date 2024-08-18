@@ -76,8 +76,8 @@ main a {
 
   .info-block {
     padding: 40px 20px 50px 20px;
-    background-position: -0% 200%;
-    background-size: 150%;
+    background-position: 100px 470px;
+    background-size: 100%;
     border-radius: 30px;
   }
   .about-us {

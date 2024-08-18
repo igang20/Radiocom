@@ -88,6 +88,7 @@
 .PS-text {
   align-self: flex-end;
   margin-right: 10px;
+  font-size: 12px;
 }
 @media (max-width: 1340px) {
   .rates-content {
@@ -119,6 +120,9 @@
   .rates-content {
     width: 100%;
     padding: 0;
+  }
+  .rates-btn-container {
+    transform: scale(0.8);
   }
 
   .rates-heading {

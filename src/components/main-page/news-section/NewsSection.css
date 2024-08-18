@@ -6,6 +6,7 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .news-content {
@@ -37,7 +38,7 @@
 .bcg-img2 {
   position: absolute;
   z-index: -2;
-  margin-left: 1500px;
+  left: 80%;
 }
 @media (max-width: 720px) {
   .news-heading {

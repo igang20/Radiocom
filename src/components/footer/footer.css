@@ -54,7 +54,10 @@ footer {
 }
 @media (max-width: 480px) {
   footer {
-    height: 100px;
+    height: 50px;
+  }
+  footer p {
+    font-size: 12px !important;
   }
   .footer-content {
     gap: 30px;
@@ -64,7 +67,6 @@ footer {
     font-weight: 200;
   }
   .footer-content h6 {
-    font-size: 8px;
     font-weight: 200;
   }
 }
