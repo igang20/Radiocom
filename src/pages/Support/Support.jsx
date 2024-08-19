@@ -81,7 +81,6 @@ export default function Support() {
                   values.phone = values.phone
                     .replace(/\D/g, "")
                     .replace(/^(3730|373|0)/, "");
-
                 }}
                 value={values.phone}
                 disabled={isSubmitting || sbmitSuccess}
