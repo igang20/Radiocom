@@ -1,9 +1,6 @@
 import { useEffect } from 'react'
-
-import { useMemo } from 'react'
 import './SpeedTest.css'
-import { useLocation } from 'react-router-dom'
-import CircularProgress from '@mui/material/CircularProgress';
+
 
 export default function SpeedTest() {
 
