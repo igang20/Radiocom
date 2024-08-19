@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useMemo } from 'react'
 import './SpeedTest.css'
 import { useLocation } from 'react-router-dom'
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function SpeedTest() {
 
@@ -13,12 +14,13 @@ export default function SpeedTest() {
                 window.localStorage.setItem('fixingReaload', false)
                 window.location.reload()
             }
-        }, 800)
+        }, 1000)
         return () => clearTimeout(timeout)
     }, [])
     return (
         <>
             <main>
+
                 <div className='speed-test-block'>
                     <h1>Проверка скорости</h1>
                     <div id="sc-container">
@@ -30,7 +32,7 @@ export default function SpeedTest() {
                     </div>
                 </div>
 
-            </main>
+            </main >
         </>
     )
 }

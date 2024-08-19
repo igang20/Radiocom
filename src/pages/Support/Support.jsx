@@ -1,11 +1,16 @@
 import "./Support.css";
-import { Formik, Field } from "formik";
+import { Formik } from "formik";
 
 import { SendData } from "../../hooks/fetchData";
-import { Input } from "@mui/material";
+import { CircularProgress, Icon, Input } from "@mui/material";
 import { supportSchema } from "../../hooks/dataTools";
+import { useState } from "react";
+import { green } from "@mui/material/colors";
+
+
 
 export default function Support() {
+  const [sbmitSuccess, setSuccess] = useState(false)
   return (
     <main>
       <section className="support-block">
@@ -21,17 +26,23 @@ export default function Support() {
           validateOnBlur={false}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              setSubmitting(false);
-              const responcce = SendData(
-                `${values.name} 
-                ${values.phone}
-                 ${values.comment}`
-              ).then(res => {
-                console.log(res.status)
+              let data =
+                "<a><strong>" +
+                "Заявка в поддержку" +
+                "</strong></a>" +
+                "%0A%0A" +
+                values.name +
+                "%0A" +
+                values.phone +
+                "%0A" +
+                values.comment;
+              // eslint-disable-next-line no-unused-vars
+              const response = SendData(data).then((res) => {
+                console.log(res.status);
+                setSubmitting(false);
+                setSuccess(true)
               });
-              values.name = "";
-              values.phone = "";
-              values.comment = "";
+
             }, 2000);
           }}
         >
@@ -55,9 +66,9 @@ export default function Support() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 error={errors.name && true}
+                disabled={isSubmitting || sbmitSuccess}
               />
 
-              {console.log(errors.name)}
               <Input
                 error={errors.phone && true}
                 fullWidth
@@ -73,9 +84,10 @@ export default function Support() {
 
                 }}
                 value={values.phone}
+                disabled={isSubmitting || sbmitSuccess}
               />
               <textarea
-
+                disabled={isSubmitting || sbmitSuccess}
                 type="text"
                 rows={5}
                 placeholder="Ваш комментарий"
@@ -84,12 +96,19 @@ export default function Support() {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
+              {isSubmitting && <div><CircularProgress /></div>}
+              {sbmitSuccess ? (
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <Icon sx={{ color: green[500], fontSize: '40px' }}>done</Icon>
+                  <p>Успешно отправлено</p>
+                </div>
+              ) : false}
               <div style={{ color: "#ff0000" }}>
                 <p>{errors.name}</p>
                 <p>{errors.phone}</p>
-
               </div>
-              <button type="submit" disabled={isSubmitting}>
+
+              <button type="submit" disabled={isSubmitting || sbmitSuccess}>
                 ОТПРАВИТЬ
               </button>
             </form>

@@ -45,7 +45,10 @@ button {
 button:hover {
   background-position: 100%;
 }
-button:disabled {
+button:disabled,
+.Mui-disabled,
+textarea:disabled {
+  color: gray !important;
   filter: grayscale(1);
 }
 
@@ -66,7 +69,8 @@ textarea:focus,
     0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.MuiInput-root {
+.MuiInput-root,
+.MuiSelect-root {
   background-color: #fff;
   font-size: inherit !important;
   font-family: inherit !important;
