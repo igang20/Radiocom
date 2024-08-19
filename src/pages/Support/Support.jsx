@@ -22,12 +22,20 @@ export default function Support() {
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               setSubmitting(false);
-              const responcce = SendData(
-                `${values.name} 
-                ${values.phone}
-                 ${values.comment}`
-              ).then(res => {
-                console.log(res.status)
+              let data =
+                "Заявка в техническую поддержку" +
+                "%0A%0A" +
+                "Имя: " +
+                values.name +
+                "%0A" +
+                "Номер телефона: " +
+                values.phone +
+                "%0A" +
+                "Текст: " +
+                "%0A" +
+                values.comment;
+              const response = SendData(data).then((res) => {
+                console.log(res.status);
               });
               values.name = "";
               values.phone = "";
@@ -70,12 +78,10 @@ export default function Support() {
                   values.phone = values.phone
                     .replace(/\D/g, "")
                     .replace(/^(3730|373|0)/, "");
-
                 }}
                 value={values.phone}
               />
               <textarea
-
                 type="text"
                 rows={5}
                 placeholder="Ваш комментарий"
@@ -87,7 +93,6 @@ export default function Support() {
               <div style={{ color: "#ff0000" }}>
                 <p>{errors.name}</p>
                 <p>{errors.phone}</p>
-
               </div>
               <button type="submit" disabled={isSubmitting}>
                 ОТПРАВИТЬ
