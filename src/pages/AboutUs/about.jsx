@@ -36,6 +36,10 @@ export default function about() {
                         <li className="contact-text">
                             <img src="./imgs/AboutPageRefs/Location.svg" alt="location" />Днестровск, ул. Строителей, 33
                         </li>
+                        <li className="contact-text">
+                            <img src="./imgs/AboutPageRefs/document.svg" alt="document" width={20} className='publicOferta' />
+                            <a href="" download={true}>Публичная оферта</a>
+                        </li>
                     </ul>
                 </div>
             </div>

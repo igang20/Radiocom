@@ -5,7 +5,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import CloseIcon from '@mui/icons-material/Close';
+
 import { useState } from "react";
 
 export default function NewsCard(props) {
@@ -35,7 +35,7 @@ export default function NewsCard(props) {
         </DialogTitle>
         <DialogContent >
           <DialogContentText id="alert-dialog-description">
-            {props.DialogText}
+            {props.text}
           </DialogContentText>
         </DialogContent>
         <DialogActions>

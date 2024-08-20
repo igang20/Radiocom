@@ -40,7 +40,6 @@ main a {
 }
 
 .contacts {
-  height: 158px;
   padding-left: 35px;
 }
 
@@ -70,6 +69,14 @@ main a {
 }
 
 @media screen and (max-width: 425px) {
+  .contacts {
+    padding: 0;
+  }
+
+  .publicOferta {
+    fill: #408fcb;
+    color: #408fcb;
+  }
   main {
     padding: 25px 10px !important;
   }
