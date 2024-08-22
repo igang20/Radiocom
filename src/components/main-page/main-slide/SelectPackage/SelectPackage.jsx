@@ -13,8 +13,6 @@ import { useStore } from '../../../../hooks/Zustand';
 export default function SelectPackage(props) {
     const myStore = useStore()
 
-
-
     return (<Modal open={props.open}
         onClose={props.onClose}>
         <div className="SelectPackdge">

@@ -35,7 +35,7 @@ export default function NewsCard(props) {
         </DialogTitle>
         <DialogContent >
           <DialogContentText id="alert-dialog-description">
-            {props.text}
+            {props.DialogText}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
