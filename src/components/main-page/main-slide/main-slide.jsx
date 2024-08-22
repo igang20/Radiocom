@@ -20,7 +20,7 @@ export default function MainSlide() {
             <button className="main-slide-connect-button" onClick={handleOpen}>
               Подключить
             </button>
-            <SelectPackage open={open} onClose={handleClose} T />
+            <SelectPackage open={open} onClose={handleClose} key={1} />
             <Link to='/speedtest'>
               <button className="main-slide-connect-button">
                 Проверка скорости

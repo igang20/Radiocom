@@ -38,7 +38,7 @@ export default function Support() {
                 values.comment;
               // eslint-disable-next-line no-unused-vars
               const response = SendData(data).then((res) => {
-                console.log(res.status);
+
                 setSubmitting(false);
                 setSuccess(true)
               });

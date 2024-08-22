@@ -8,7 +8,6 @@
 
 .rates-content {
   width: 1300px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,12 +36,13 @@
   padding: 10px;
 }
 .rates-btn-container {
+  width: 380px;
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .rates-btn {
-  width: auto;
+  width: 50%;
   height: 100%;
 }
 .rates-btn-left {
@@ -86,9 +86,12 @@
   width: 100vw !important;
 }
 .PS-text {
-  align-self: flex-end;
-  margin-right: 10px;
-  font-size: 12px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  width: fit-content;
+  align-self: center;
+  margin: 0 auto;
 }
 @media (max-width: 1340px) {
   .rates-content {
@@ -117,6 +120,9 @@
 }
 
 @media screen and (max-width: 425px) {
+  .bcg-img {
+    transform: scale(0.4);
+  }
   .rates-content {
     width: 100%;
     padding: 0;

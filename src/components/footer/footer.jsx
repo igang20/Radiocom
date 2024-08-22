@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <p > RadioCOM ©2024</p>
+        <p > RadioCom ©2024</p>
       </footer></>
   );
 }

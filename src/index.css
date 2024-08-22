@@ -77,11 +77,10 @@ textarea:focus,
   color: black !important;
 }
 
+.MuiOutlinedInput-notchedOutline,
+.MuiSelect-nativeInput,
+.MuiInput-root::after,
 .MuiInput-root::before {
-  border: none !important;
-}
-
-.MuiInput-root::after {
   border: none !important;
 }
 

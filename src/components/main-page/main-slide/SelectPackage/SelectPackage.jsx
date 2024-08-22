@@ -2,18 +2,17 @@ import './SelectPackage.css'
 import { Icon, Modal, Select, CircularProgress } from '@mui/material'
 import { Formik } from 'formik';
 import { Input } from "@mui/material";
-import { cardsContentCommon, cardsContentBussy } from '../../popular-rates/rates-data'
-import { useState } from 'react';
+import { cardsContentCommon } from '../../popular-rates/rates-data'
 import MenuItem from '@mui/material/MenuItem';
 import { SendData } from '../../../../hooks/fetchData';
 import { packageSchema } from '../../../../hooks/dataTools';
 import { green } from '@mui/material/colors';
+import { useStore } from '../../../../hooks/Zustand';
 
 
 export default function SelectPackage(props) {
+    const myStore = useStore()
 
-    const packagesData = cardsContentCommon.concat(cardsContentBussy)
-    const [sbmitSuccess, setSuccess] = useState(false)
 
 
     return (<Modal open={props.open}
@@ -22,7 +21,7 @@ export default function SelectPackage(props) {
             <h2>Заявка на подключение</h2>
 
             <Formik
-                initialValues={{ name: "", phone: "", addres: "", package: packagesData[0].title }}
+                initialValues={{ name: "", phone: "", addres: "", package: cardsContentCommon[2].title }}
                 validationSchema={packageSchema}
                 validateOnChange={false}
                 validateOnBlur={false}
@@ -41,9 +40,9 @@ export default function SelectPackage(props) {
                             "%0A" +
                             values.package;
                         const response = SendData(data).then((res) => {
-                            console.log(res.status);
-                            setSubmitting(false);
-                            setSuccess(true)
+                            myStore.setStatus(true)
+                            setSubmitting(false)
+
                         });
                     }, 2000);
                 }}
@@ -62,10 +61,9 @@ export default function SelectPackage(props) {
                     ) => (
 
                         < form className='SelectPackageForm' onSubmit={handleSubmit} >
-                            {
-                                console.log(isSubmitting)}
+
                             <Input
-                                disabled={sbmitSuccess || isSubmitting}
+                                disabled={myStore.submitStatus || isSubmitting}
                                 placeholder='ФИО'
                                 type='text'
                                 name='name'
@@ -74,7 +72,7 @@ export default function SelectPackage(props) {
                                 error={errors.name && true}
                             />
                             <Input
-                                disabled={sbmitSuccess || isSubmitting}
+                                disabled={myStore.submitStatus || isSubmitting}
                                 placeholder='77712345'
                                 type='text'
                                 name='phone'
@@ -89,7 +87,7 @@ export default function SelectPackage(props) {
                             />
 
                             <Input
-                                disabled={sbmitSuccess || isSubmitting}
+                                disabled={myStore.submitStatus || isSubmitting}
                                 placeholder="Адрес"
                                 type='text'
                                 name='addres'
@@ -99,14 +97,14 @@ export default function SelectPackage(props) {
                             />
 
                             <Select
-                                disabled={sbmitSuccess || isSubmitting}
+                                disabled={myStore.submitStatus || isSubmitting}
                                 name='package'
                                 value={values.package}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 error={errors.package && true}
                             >
-                                {packagesData.map((pack, index) => {
+                                {cardsContentCommon.map((pack, index) => {
                                     return (
                                         <MenuItem value={pack.title} key={index}>
                                             {pack.title}
@@ -121,16 +119,16 @@ export default function SelectPackage(props) {
                                 <p>{errors.addres}</p>
                             </div>
 
-                            {sbmitSuccess ? (
+                            {myStore.submitStatus ? (
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                                     <Icon sx={{ color: green[500], fontSize: '40px' }}>done</Icon>
                                     <p>Успешно отправлено</p>
                                 </div>
                             ) : false}
 
-                            <div style={{ display: 'flex', gap: '10px', marginTop: '20px', }}>
-                                <button type="submit" disabled={isSubmitting || sbmitSuccess}>Отправить</button>
-                                <button onClick={() => { props.onClose() }}>Закрыть</button>
+                            <div style={{ display: 'flex', gap: '10px', marginTop: '20px', width: "100%" }}>
+                                <button type="submit" disabled={myStore.submitStatus || isSubmitting} style={{ width: '50%' }}>Отправить</button>
+                                <button onClick={() => { props.onClose() }} style={{ width: '50%' }}>Закрыть</button>
                             </div>
                         </form>
                     )

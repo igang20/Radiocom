@@ -3,19 +3,24 @@ import "./popular-rates.css";
 import RatesCard from "./rates-card/rates-card";
 import { useState } from "react";
 import * as content from "./rates-data.js";
-import useWindowDimensions from "../../useWindowDimensions/WindowDimensions";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css/effect-cards";
+import useWindowDimensions from "../../../hooks/WindowDimensions.js"
+
+
+
+
 
 export default function PopularRates() {
+
   const dimensions = useWindowDimensions();
   const [bussy, setBussy] = useState(false);
   let cardsContent = content.cardsContentCommon;
+
   if (bussy === false) {
     cardsContent = content.cardsContentCommon;
   } else {
@@ -65,6 +70,13 @@ export default function PopularRates() {
           navigation={true}
           modules={[Pagination, Navigation]}
           className="ServiceSlider"
+
+          onInit={(swiper) => {
+            if (!bussy) {
+              swiper.once().slideTo(2)
+            }
+          }}
+
         >
           {SwiperList}
         </Swiper>
@@ -82,6 +94,7 @@ export default function PopularRates() {
         />
         <div className="rates-heading">
           <h1 className="popular-rates-title">Tарифные планы</h1>
+
           <div className="rates-btn-container">
             <button
               onClick={commonCards}
@@ -98,11 +111,13 @@ export default function PopularRates() {
               ДЛЯ БИЗНЕСА
             </button>
           </div>
+
         </div>
         <div className="cards-container">
           {dimensions.width > 650 ? <ul>{CardsList}</ul> : <MobileRates />}
+
         </div>
-        <span className="PS-text">*Подключение бесплатно</span>
+        <p className="PS-text">Подключение бесплатно</p>
       </div>
     </section>
   );
