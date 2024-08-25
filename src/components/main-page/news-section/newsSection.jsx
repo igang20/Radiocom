@@ -7,7 +7,7 @@ export default function NewsSection() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    const myData = getData("http://172.20.31.30:1337/api/news").then((res) => {
+    const myData = getData("http://localhost:1337/api/news").then((res) => {
       setData(normalizeNewsDataObject(res.data));
     });
   }, []);

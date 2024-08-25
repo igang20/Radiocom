@@ -11,15 +11,14 @@ export default function Payment() {
                     <div className="banks">
                         <p>Оплата наличными возможна в отделениях следующих банков:</p>
                         <ul className='banks-list'>
-                            <li><a> ОАО "Эксимбанк"</a></li>
-                            <li><a>ЗАО "Агропромбанк"</a></li>
+                            <li><a href='https://online.agroprombank.com/Login.aspx' target='_blank'>ЗАО "Агропромбанк"</a></li>
+                            <li><a href='https://ibank.bankexim.com/client/' target='_blank'>ОАО "Эксимбанк"</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="payment-guides payment-variables">
                     <h3>Инструкции по оплате онлайн</h3>
                     <AccordionsSection>
-
                     </AccordionsSection>
                 </div>
             </div>
