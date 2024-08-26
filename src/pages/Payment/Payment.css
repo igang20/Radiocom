@@ -52,6 +52,20 @@
   width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  .payment-heading {
+    margin-top: 0;
+  }
+  main {
+    padding: 40px 15px;
+  }
+  .payment-block {
+    padding: 30px 15px;
+    width: 100%;
+    border-radius: 25px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .payment-heading {
     margin: 0;

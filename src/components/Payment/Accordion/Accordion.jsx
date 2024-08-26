@@ -11,7 +11,7 @@ import PaymentGuidProgreess from '../PaymentGuidProgress/PaymnetGuidProgress';
 export default function PaymentAccordion(props) {
 
     return (
-        <Accordion>
+        <Accordion className={'PaymnetAccordion'}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} >
                 {props.title}
             </AccordionSummary>

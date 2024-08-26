@@ -120,6 +120,9 @@
 }
 
 @media screen and (max-width: 425px) {
+  .swiper {
+    height: auto;
+  }
   .bcg-img {
     transform: scale(0.4);
   }
