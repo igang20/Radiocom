@@ -19,7 +19,7 @@ export default function SpeedTest() {
                         </div>
                     </div> */}
                     <div className='speedTestFrame '>
-                        <iframe src="https://2ip.ru/speed-widget/?id=769" height={600} width={500} style={{ border: 'none' }} title='speedtest'></iframe>
+                        <iframe src="https://2ip.ru/speed-widget/?id=979" height={600} width={500} style={{ border: 'none' }} title='speedtest'></iframe>
                     </div>
                 </div>
 

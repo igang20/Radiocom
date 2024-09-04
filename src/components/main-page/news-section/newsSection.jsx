@@ -2,6 +2,8 @@ import "./NewsSection.css";
 import NewsCard from "./NewsCard/NewsCard";
 import { normalizeNewsDataObject, getData } from "../../../hooks/fetchData";
 import { useEffect, useState } from "react";
+import { CircularProgress } from "@mui/material";
+
 
 export default function NewsSection() {
   const [data, setData] = useState(null);
@@ -15,11 +17,11 @@ export default function NewsSection() {
   return (
     <section className="news-section">
       <div className="news-content">
-        {/*<img
+        {/* <img
           src="/imgs/BcgReferences/Newspaper.svg"
           alt="Newspaper"
           className="bcg-img2"
-        />*/}
+        /> */}
         <h1 className="news-heading">Новости компании</h1>
         <div>
           {data ? (
@@ -43,7 +45,7 @@ export default function NewsSection() {
               })}
             </ul>
           ) : (
-            "Загрузка..."
+            <CircularProgress />
           )}
         </div>
       </div>

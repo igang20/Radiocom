@@ -43,9 +43,6 @@ button {
   color: #fff;
 }
 
-a {
-}
-
 button:hover {
   transition: all 0.3 ease;
   background-position: 100%;

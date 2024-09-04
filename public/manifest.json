@@ -1,6 +1,6 @@
 {
   "short_name": "RadioCom",
-  "name": "RadioCom Internet provider",
+  "name": "Интернет Провайдер RadioCom",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

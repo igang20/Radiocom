@@ -60,9 +60,14 @@
     padding: 40px 15px;
   }
   .payment-block {
-    padding: 30px 15px;
     width: 100%;
     border-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .payment-block {
+    padding: 60px 30px;
   }
 }
 
