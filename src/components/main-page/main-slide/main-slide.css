@@ -162,7 +162,8 @@
     padding-left: 20px;
   }
   .main-slide-text h1 {
-    font-size: 48px;
+    font-size: 48px !important;
+    line-height: normal;
   }
   .main-slide-text h2 {
     font-size: 40px;

@@ -28,5 +28,6 @@ export async function getData(url) {
     return json;
   } catch (error) {
     console.log(error);
+    alert(error);
   }
 }

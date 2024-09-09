@@ -20,7 +20,7 @@ export default function Header() {
         <header>
           <div className="header-content">
             <Link to="/">
-              <img src="/imgs/logotype.png" className="logo" alt="logo" height={'auto'} />
+              <img src="/imgs/Logo.svg" className="logo" alt="logo" height={'auto'} />
             </Link>
             <div className="header-links">
               <Link to="/payment">Оплата</Link>

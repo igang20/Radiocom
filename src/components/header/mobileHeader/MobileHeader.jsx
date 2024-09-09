@@ -20,9 +20,10 @@ export default function MobileHeader() {
     return (
         <header className="mobile-header">
             <button onClick={() => { setOpne(true) }}><MenuIcon /></button>
-            <Link to='/'><img src="/imgs/logotype.png" className="logo" alt='logo' /></Link>
+            <Link to='/' style={{ height: 'auto', }}><img src="/imgs/Logo.svg" className="logo" alt='logo' /></Link>
             <Drawer open={open} onClose={() => { toggleDrawer(false) }}>
                 <div className="header-links drawer-links" >
+                    <Link onClick={() => { toggleDrawer(false) }} to='/'>Главная</Link>
                     <Link onClick={() => { toggleDrawer(false) }} to="/payment">Оплата</Link>
                     <Link onClick={() => { toggleDrawer(false) }} to="/support">Поддержка</Link>
                     <Link onClick={() => { toggleDrawer(false) }} to="/speedtest">Тест скорости</Link>

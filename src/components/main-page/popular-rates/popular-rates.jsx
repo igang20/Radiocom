@@ -19,10 +19,14 @@ export default function PopularRates() {
 
   const dimensions = useWindowDimensions();
   const [bussy, setBussy] = useState(false);
-  let cardsContent = content.cardsContentCommon;
+  let cardsContent = content.ratesMobile;
+
+
+
+
 
   if (bussy === false) {
-    cardsContent = content.cardsContentCommon;
+    cardsContent = content.ratesMobile;
   } else {
     cardsContent = content.cardsContentBussy;
   }
@@ -66,17 +70,11 @@ export default function PopularRates() {
     return (
       <>
         <Swiper
+
           rewind={true}
           navigation={true}
           modules={[Pagination, Navigation]}
           className="ServiceSlider"
-
-          onInit={(swiper) => {
-            if (!bussy) {
-              swiper.once().slideTo(2)
-            }
-          }}
-
         >
           {SwiperList}
         </Swiper>
@@ -114,7 +112,7 @@ export default function PopularRates() {
 
         </div>
         <div className="cards-container">
-          {dimensions.width > 650 ? <ul>{CardsList}</ul> : <MobileRates />}
+          {window.innerWidth > 650 ? <ul>{CardsList}</ul> : <MobileRates />}
 
         </div>
         <p className="PS-text">Подключение бесплатно</p>

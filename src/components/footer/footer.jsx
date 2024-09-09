@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <p > RadioCom ©2024</p>
+        <img src="/imgs/Favicon.svg" alt="FooterLogo" />
       </footer></>
   );
 }

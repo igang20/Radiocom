@@ -28,6 +28,39 @@ const cardsContentCommon = [
     category: "common",
   },
 ];
+
+const ratesMobile = [
+  {
+    title: "Комфортный",
+    speed: 100,
+    img: "/imgs/InternetSpeed/100mb.png",
+    price: 160,
+    category: "common",
+  },
+  {
+    title: "Льготный",
+    speed: 5,
+    img: "/imgs/InternetSpeed/5mb.png",
+    price: 80,
+    category: "common",
+  },
+  {
+    title: "Начальный",
+    speed: 60,
+    img: "/imgs/InternetSpeed/60mb.png",
+    price: 120,
+    category: "common",
+  },
+
+  {
+    title: "Профессиональный",
+    speed: 200,
+    img: "/imgs/InternetSpeed/200mb.png",
+    price: 224,
+    category: "common",
+  },
+];
+
 const cardsContentBussy = [
   {
     title: "Online-касса",
@@ -59,4 +92,4 @@ const cardsContentBussy = [
   },
 ];
 
-export { cardsContentCommon, cardsContentBussy };
+export { cardsContentCommon, cardsContentBussy, ratesMobile };

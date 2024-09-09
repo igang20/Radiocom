@@ -51,6 +51,7 @@ textarea {
 @media screen and (max-width: 425px) {
   .support-heading {
     margin: 0;
+    line-height: normal;
   }
   .support-block {
     padding: 30px 15px;

@@ -130,8 +130,10 @@ ul {
 
 @media screen and (max-width: 425px) {
   h1 {
-    font-size: 48px !important;
-    line-height: 52px;
+    font-size: 36px !important;
+  }
+  h3 {
+    font-size: 24px !important;
   }
   h2 {
     line-height: 26px !important;

@@ -21,18 +21,15 @@ export default function about() {
                             <img src="./imgs/AboutPageRefs/Phone.svg" alt='phone' />
                             <a href="tel:0 (777) 6-12-12 ">0 (777) 6-12-12</a>
                         </li>
-
-                        <li className="contact-text">
-                            <img src="./imgs/AboutPageRefs/Email.svg" alt='email' />
-                            <a href="mailto:eample@email.com "> xample@email.com</a>
-                        </li>
-
                         <li className="contact-text">
                             <img src="./imgs/AboutPageRefs/Online Support.svg" alt='support
                             '/>
                             <a href="tel:0 (219) 3-40-40">0 (219) 3-40-40</a>
                         </li>
-
+                        <li className="contact-text">
+                            <img src="./imgs/AboutPageRefs/Email.svg" alt='email' />
+                            <a href="mailto:dnestrradiocom@gmail.com"> dnestrradiocom@gmail.com</a>
+                        </li>
                         <li className="contact-text">
                             <img src="./imgs/AboutPageRefs/Location.svg" alt="location" />Днестровск, ул. Строителей, 33
                         </li>

@@ -10,7 +10,6 @@ const useWindowDimensions = () => {
     function handleResize() {
       setWindowDimensions({
         width: window.innerWidth,
-        height: window.innerHeight,
       });
     }
     handleResize();
