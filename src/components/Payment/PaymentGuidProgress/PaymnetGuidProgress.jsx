@@ -71,7 +71,7 @@ export default function PaymentGuidProgreess(props) {
                         <SwiperSlide >
 
                             <img src={data.img} className='GuidIllustration' alt='GuidIllustration' id={imgId} onClick={(e) => {
-                                console.log(e.target.naturalHeight)
+
                                 selectedPhoto.current = e.target.currentSrc
                                 if (e.target.naturalHeight < 600) {
                                     setScale(2)
@@ -95,7 +95,7 @@ export default function PaymentGuidProgreess(props) {
 
             <Dialog open={open} onClose={() => { handleClose() }} id='paymendial'>
                 <DialogActions className='dialActions'><CloseIcon onClick={() => { handleClose() }} sx={{ fill: 'red !important' }} /></DialogActions>
-                <DialogContent sx={{ padding: 0, scale: "", }}>
+                <DialogContent sx={{ padding: 0 }}>
 
                     <div className="DialContentn" >
                         <style>
@@ -103,6 +103,7 @@ export default function PaymentGuidProgreess(props) {
                                 scale: ${PhotoScale};
                             
                             }
+
                         `}
                         </style>
                         <img src={selectedPhoto.current} alt="" />
