@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import useWindowDimensions from '../../../hooks/WindowDimensions';
 import { useRef, useState } from 'react';
-import { DialogActions } from '@mui/material';
+import { DialogActions, DialogContent } from '@mui/material';
 
 import CloseIcon from '@mui/icons-material/Close';
 import { red } from '@mui/material/colors';
@@ -19,13 +19,13 @@ import { red } from '@mui/material/colors';
 export default function PaymentGuidProgreess(props) {
     const [open, setOpen] = useState(false)
     const selectedPhoto = useRef(null)
+    const [PhotoScale, setScale] = useState(1)
 
 
 
     const dimensions = useWindowDimensions()
 
     const handleClickOpen = (e) => {
-        console.log(e)
         setOpen(true);
     };
 
@@ -71,11 +71,11 @@ export default function PaymentGuidProgreess(props) {
                         <SwiperSlide >
 
                             <img src={data.img} className='GuidIllustration' alt='GuidIllustration' id={imgId} onClick={(e) => {
-                                console.log(e.target)
+                                console.log(e.target.naturalHeight)
                                 selectedPhoto.current = e.target.currentSrc
-
-
-                                console.log(selectedPhoto)
+                                if (e.target.naturalHeight < 600) {
+                                    setScale(2)
+                                }
                                 handleClickOpen()
                             }} />
 
@@ -94,11 +94,20 @@ export default function PaymentGuidProgreess(props) {
             })}
 
             <Dialog open={open} onClose={() => { handleClose() }} id='paymendial'>
-                <DialogActions className='dialActions'><CloseIcon onClick={() => { handleClose() }} htmlColor='red' /></DialogActions>
-                <div className="DialContentn">
-                    <img src={selectedPhoto.current} alt="" />
-                </div>
+                <DialogActions className='dialActions'><CloseIcon onClick={() => { handleClose() }} sx={{ fill: 'red !important' }} /></DialogActions>
+                <DialogContent sx={{ padding: 0, scale: "", }}>
 
+                    <div className="DialContentn" >
+                        <style>
+                            {`.MuiDialog-paper{
+                                scale: ${PhotoScale};
+                            
+                            }
+                        `}
+                        </style>
+                        <img src={selectedPhoto.current} alt="" />
+                    </div>
+                </DialogContent>
             </Dialog>
         </Swiper>
     )
