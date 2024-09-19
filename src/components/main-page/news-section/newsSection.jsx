@@ -7,10 +7,16 @@ import { CircularProgress } from "@mui/material";
 
 export default function NewsSection() {
   const [data, setData] = useState(null);
+  const [error, setError] = useState(false)
 
   useEffect(() => {
-    const myData = getData("http://192.168.100.107:1337/api/news").then((res) => {
-      setData(normalizeNewsDataObject(res.data));
+    const myData = getData("http://localhost:1337/api/news").then((res) => {
+      if (!res) {
+        setError(true)
+      }
+      else {
+        setData(normalizeNewsDataObject(res.data));
+      }
     });
   }, []);
 
@@ -44,9 +50,7 @@ export default function NewsSection() {
                 );
               })}
             </ul>
-          ) : (
-            <CircularProgress />
-          )}
+          ) : error ? <p>Список новостей пуст</p> : (<CircularProgress />)}
         </div>
       </div>
     </section>
