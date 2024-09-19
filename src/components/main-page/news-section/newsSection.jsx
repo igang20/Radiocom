@@ -10,7 +10,7 @@ export default function NewsSection() {
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    const myData = getData("http://localhost:1337/api/news").then((res) => {
+    const myData = getData("http:// 217.19.211.110:1337/api/news").then((res) => {
       if (!res) {
         setError(true)
       }
