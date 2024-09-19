@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c28512d.css",
+    "main.js": "/static/js/main.fea62876.js",
+    "static/media/TT Norms Pro Bold.otf": "/static/media/TT Norms Pro Bold.b3d2a1611bdbcb6bec24.otf",
+    "static/media/TT Norms Pro Medium.otf": "/static/media/TT Norms Pro Medium.a3dc2d380103c718f45f.otf",
+    "static/media/TT Norms Pro Regular.otf": "/static/media/TT Norms Pro Regular.afdec721305148234e0a.otf",
+    "static/media/operator.svg": "/static/media/operator.0a18f4c6da78e417a228.svg",
+    "index.html": "/index.html",
+    "static/media/about.svg": "/static/media/about.c4b6f4f37ce7c740af17.svg",
+    "main.7c28512d.css.map": "/static/css/main.7c28512d.css.map",
+    "main.fea62876.js.map": "/static/js/main.fea62876.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c28512d.css",
+    "static/js/main.fea62876.js"
+  ]
+}
