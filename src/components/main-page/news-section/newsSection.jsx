@@ -10,14 +10,16 @@ export default function NewsSection() {
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    const myData = getData("http:// 217.19.211.110:1337/api/news").then((res) => {
-      if (!res) {
-        setError(true)
-      }
-      else {
-        setData(normalizeNewsDataObject(res.data));
-      }
-    });
+    // const myData = getData("http:// 217.19.211.110:1337/api/news").then((res) => {
+    //   if (!res) {
+    //     setError(true)
+    //   }
+    //   else {
+    //     setData(normalizeNewsDataObject(res.data));
+    //   }
+    // });
+
+    setData([{ title: 'Новый сайт нашего интернет-провайдера!', date: '09/09/2024', text: 'Рады сообщить о запуске нашего нового сайта! Мы обновили дизайн и улучшили функционал, чтобы вам было удобнее пользоваться нашими услугами. Теперь на сайте вы сможете быстро узнать информацию о тарифах, подключить интернет, узнать про оплату услуг и получить оперативную поддержку. Мы учли ваши пожелания и постарались сделать сайт максимально удобным и информативным. Добро пожаловать на наш новый сайт!' }])
   }, []);
 
   return (
@@ -33,19 +35,25 @@ export default function NewsSection() {
           {data ? (
             <ul className="cards-section">
               {data.map((itm, index) => {
-                let CardText = itm.attributes.body[0].children[0].text;
-                if (itm.attributes.body[0].children[0].text.length > 220) {
+                // let CardText = itm.attributes.body[0].children[0].text;
+                // if (itm.attributes.body[0].children[0].text.length > 220) {
+                //   CardText =
+                //     itm.attributes.body[0].children[0].text.slice(0, 220) +
+                //     "...";
+                // }
+                let CardText = itm.text
+                if (itm.text.length > 220) {
                   CardText =
-                    itm.attributes.body[0].children[0].text.slice(0, 220) +
+                    itm.text.slice(0, 220) +
                     "...";
                 }
                 return (
                   <NewsCard
                     key={index}
-                    title={itm.attributes.title}
+                    title={itm.title}
                     text={CardText}
-                    date={itm.attributes.date}
-                    DialogText={itm.attributes.body[0].children[0].text}
+                    date={itm.date}
+                    DialogText={itm.text}
                   />
                 );
               })}
